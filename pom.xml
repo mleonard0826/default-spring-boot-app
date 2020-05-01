@@ -65,6 +65,13 @@
 			<artifactId>logger-java-logback</artifactId>
 			<version>4.0.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.github.reportportal</groupId>
+			<artifactId>agent-java-junit5</artifactId>
+			<version>5.0.0-BETA-9</version>
+		</dependency>
+
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
@@ -104,10 +111,6 @@
 	<build>
 		<pluginManagement>
 			<plugins>
-				<plugin>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-maven-plugin</artifactId>
-				</plugin>
 				<!-- Add this if you plan to import into Eclipse -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
@@ -136,6 +139,10 @@
 			</plugins>
 		</pluginManagement>
 		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
 			<!-- This provides the path to the Java agent -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
